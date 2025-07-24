@@ -33,11 +33,8 @@ body {
     display: grid;
     grid-row: 1 / 2;
     grid-column: 1 / 3;
+    padding-bottom: 2rem;
     
-}
-
-div {
-    border: 1px solid black;
 }
 
 
@@ -72,6 +69,9 @@ div {
     grid-template-columns: 1fr;
     grid-column: 2 / 3;
     grid-row: 1 / 2;    
+    background-color: white;
+    
+    
 }
 
 .header-first-row {
@@ -86,11 +86,17 @@ div {
     grid-template-rows: 1.5fr 4fr 8fr;
     grid-column: 1 / 2;
     grid-row: 1 / 3;
+    background-color: rgba(55,53,48,255);
 }
 
 .sidebar-text {
     grid-column: 2 / 3;
-    border: 1px solid black;
+    color: rgba(249,250,251,255);
+    font-size: 1.3rem;
+}
+
+.sidebar-title {
+    color: rgba(249,250,251,255);
 }
 
 
@@ -115,7 +121,7 @@ div {
 .profile-bar > ul > li {
     gap: 10px;
     display: grid;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
     grid-template-columns: 1fr 1fr 3fr;
     grid-template-rows: 1fr;
@@ -193,6 +199,12 @@ div {
 .icon {
     width: 30px;
     height: 30px;
+    
+}
+
+.dashboard-icon {
+    width: 80px;
+    height: 80px;
 }
 
 .sidebar-centering-logo-div {
@@ -200,16 +212,22 @@ div {
     justify-content: center;
 }
 
+.dashboard-centering-logo-div {
+    display: grid;
+    justify-content: center;
+    margin-right: 1rem;
+}
 
 .profile-picture {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
 }
 
 .profile-bar-name {
     font-size: 1.8rem;
     font-weight: bold;
-    border: 1px solid black;
+    margin-left: 5px;
+    
 }
 
 .header-profile-bar-centering-logo-div {
@@ -225,8 +243,10 @@ div {
 
 .header-second-row {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1.7fr 0.7fr;
     grid-template-rows: 1fr;
+    position: relative;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.17);
 }
 
 .hi-name{
@@ -243,8 +263,8 @@ div {
 }
 
 .big-profile-picture {
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
 }
 .greeting-user {
     margin-left: 0.9rem;
@@ -262,8 +282,8 @@ div {
 
 .buttons {
     height: 2.5rem;
-    width: 6rem;
-    background-color: #373530;
+    width: 7rem;
+    background-color: rgba(55,53,48,255);
     border-radius: 150px;
     border: 0px;
     margin-top: 0.5rem;
@@ -275,10 +295,12 @@ div {
 
 .header-buttons{
     display: grid;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
+    
+    
 }
 
 .cards-projects-container{
@@ -287,44 +309,60 @@ div {
     display: grid;
     grid-column: 1 / 2;
     grid-row: 1 / -1;
+    background-color: rgba(245, 245, 245, 1);
+    
 }
 
 
 .announcements-and-trending-container {
     display: grid;
-    grid-template-rows: 0.8fr 0.7fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 0.9fr;
     grid-column: 2 / -1;
+    grid-row: 1 / -1;
+    align-items: start;
+   padding-top: 1.75rem;
+   background-color:  	rgba(245, 245, 245, 1);
+
 }
 .cards-announcements{
-    grid-template-rows: 0.1fr 0.01fr 0.3fr 0.05fr;
     display: grid;
     grid-row: 1 / 2;
+    
 }
 
-.cards-announcements-title {
-    grid-row: 2 / 3;
-}
 
 .cards-announcements-container {
-    grid-row: 3 / 4;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.315) 2px 2px 5px;
+    border-radius: 10px;
+
+
+
 }
 
 .cards-trending {
-    grid-row: 2 / -1;
+    grid-row: 2 / 3;
+    
+    
+    
+    
 }
 
 .cards-projects-title {
     grid-column: 2 / 2;
     grid-row: 2 / 2;
-    border: 1px solid black;
     margin-bottom: 0.5rem;
+    font-size: 1px;
+    
 }
 
 .cards-projects {
     display: grid;
     gap: 30px;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     grid-column: 2 / 3;
     grid-row: 3 / 4;
 }
@@ -335,29 +373,31 @@ div {
     display: grid;
     grid-template-columns: 0.1fr 0.2fr 5fr;
     grid-template-rows: 0.3fr 2fr 0.5fr 0.5fr;
+    background-color: red;
+    border-radius: 10px;
+    background: linear-gradient(to right, rgba(255, 165, 0, 1) 0px, rgba(255, 165, 0, 1) 8px, #fff 8px, #fff 100%);
+    box-shadow: rgba(0, 0, 0, 0.315) 2px 2px 5px;
+    
 }
 
-.strip {
-    grid-column: 1 / 2;
-    grid-row: 1 / -1;
-}
+
 
 .card-text {
-    border: 1px solid black;
     grid-column: 1 / 2;
     
 }
 
 .card-text-title {
-    border: 1px solid black;
     grid-column: 1 / 2;
+    font-size: 1.2rem;
+    align-self: end;
+    font-weight: bold;
 }
 
 .card-text-container {
     display: grid;
     grid-template-rows: 0.7fr 2fr;
     grid-template-columns: 10fr 0.4fr;
-    border: 1px solid black;
     grid-row: 2 / 3;
     grid-column: 3 / 4;
 }
@@ -375,3 +415,52 @@ div {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+.cards-projects-title, .cards-announcements-title, .cards-trending-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+
+
+.cards-trending-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    padding: 1.65rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.17);
+
+    
+}
+
+.cards-trending {
+    grid-row: 2 / -1;
+}
+
+
+.trending-profile-picture {
+    display: grid;
+    justify-content: center;
+}
+
+.search-bar-field {
+    border-radius: 1rem;
+    background-color: rgba(245, 245, 245, 1);
+    
+}
+
+.card-announcement-text {
+    font-size: 0.9rem;
+    padding-bottom: 20px;
+}
+
+.card-announcement-text-title {
+    font-weight: bold;
+}
+
+.main-title {
+    font-weight: bold;
+}
